@@ -1,15 +1,15 @@
 ---
-name: Ondiek Elijah
-avatar: /static/images/ondiek.png
+name: Meek Karan
+avatar: /static/images/meekkaran_.jpg
 occupation: Software Engineer, Technical Writer & Community Advocate
 company:
-email: eochieng9448@gmail.com
-twitter: https://twitter.com/0ndiekElijah
-linkedin: https://www.linkedin.com/in/ondiek-elijah/
-github: https://github.com/ondiekelijah
+email: meekkaran@gmail.com
+twitter: https://twitter.com/meekkaran_
+linkedin: https://www.linkedin.com/in/meek-jerop-karan-46584a1b0/
+github: https://github.com/meekkaran
 ---
 
-Hello World! My name is **Ondiek Elijah Ochieng**. I’m a **Software Engineer**, **a technical article writer** and a **community advocate**.
+Hello World! My name is **Meek Jerop Karan**. I’m a **Software Engineer**, **a technical article writer** and a **community advocate**.
 
 As an active member of the tech community, I have made significant contributions through my roles as an author at SheCodeAfrica, Nairobi, a visual designer at Lux Tech Academy, a gold Microsoft Learn Student Ambassador, GDSC Lead, and AWS Community Builder. Additionally, I share my expertise as an author for [Educative Inc](https://www.educative.io/) and [Draft.dev](https://draft.dev/). Through these roles, I strive to empower and inspire individuals to learn and grow in the tech ecosystem.
 
