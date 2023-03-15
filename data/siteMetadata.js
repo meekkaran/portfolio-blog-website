@@ -6,9 +6,9 @@ const siteMetadata = {
   language: 'en-us',
   theme: 'dark', // system, dark or light
   siteUrl: 'https://meekkaran.com/',
-  siteRepo: 'https://github.com/ondiekelijah/ondiek-elijah',
-  siteLogo: '/static/images/meekkaran_.jpg',
-  image: '/static/images/meekkaran_.jpg',
+  siteRepo: 'https://github.com/meekkaran/blog-website',
+  siteLogo: '/static/images/meekkaran.png',
+  image: '/static/images/meekkaran.png',
   socialBanner: '/static/images/twitter-card.png',
   email: 'meekkaran@gmail.com',
   github: 'https://github.com/meekkaran',
