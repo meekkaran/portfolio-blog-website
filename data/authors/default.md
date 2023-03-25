@@ -17,6 +17,6 @@ During my years of professional development, I've been able to gain professional
 
 **Languages:** `HTML5, CSS3, Python, JavaScript (ES6), SQL`
 
-**Frameworks:** `Flask, FastAPI, React, Next.js, Node.js, Express.js, Bootstrap5, TailwindCSS, Material UI`
+**Frameworks:** `React, Next.js, Bootstrap5, TailwindCSS, Material UI, Django,Django-rest-framework`
 
-**Tools and Skills**: `Git, GitHub & GitLab, Docker, RabbitMQ, AWS, Azure, Heroku, Digital Ocean, Sanity.io, HygraphCMS, GraphQL, Netlify, MySQL, MongoDB and PostgreSQL databases, Linux, Microservices, REST and GraphQL APIs, automation Testing(Manual and Automated) with Cypress, Pact, Pytest, Jest, Chai, Mocha, CircleCI and GitHub actions, Technical Writing.`
+**Tools and Skills**: `Git, GitHub & GitLab, AWS, Heroku, Netlify, MySQL, MongoDB and PostgreSQL databases,  REST and GraphQL APIs, automation Testing(Manual and Automated) with Robot Framework and Technical Writing.`

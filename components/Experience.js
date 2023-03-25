@@ -12,7 +12,7 @@ const Experience = ({ title, company, location, range, url, text1, text2, text3 
             <RoughNotation
               type="underline"
               show={true}
-              color="teal"
+              color="purple"
               animationDelay={800}
               animationDuration={1200}
             >

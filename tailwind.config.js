@@ -30,7 +30,7 @@ module.exports = {
       colors: {
         // 'primary-color': '#1e90ff',
         // 'primary-color-dark': '#13b57b',
-        primary: colors.teal,
+        primary: colors.purple,
         gray: colors.neutral,
       },
       typography: (theme) => ({
@@ -65,7 +65,7 @@ module.exports = {
               backgroundColor: theme('colors.gray.800'),
             },
             code: {
-              color: theme('colors.pink.500'),
+              color: theme('colors.purple.500'),
               backgroundColor: theme('colors.gray.100'),
               paddingLeft: '4px',
               paddingRight: '4px',
