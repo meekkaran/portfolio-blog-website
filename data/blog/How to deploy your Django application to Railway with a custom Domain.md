@@ -44,13 +44,13 @@ Railway has to set up the appropriate environment and dependencies and understan
 
 since our example is a Django app, this information is provided in text files:
 
-runtime.txt: states the programming language and version to use.
+**runtime.txt:** states the programming language and version to use.
 
-requirements.txt: lists the Python dependencies needed for your site, including Django.
+**requirements.txt:** lists the Python dependencies needed for your site, including Django.
 
-Procfile: A list of processes to be executed to start the web application. For Django, this will usually be the Gunicorn web application server (with a .wsgi script).
+**Procfile:** A list of processes to be executed to start the web application. For Django, this will usually be the Gunicorn web application server (with a .wsgi script).
 
-wsgi.py: WSGI configuration to call our Django application in the Railway environment.
+**wsgi.py:** WSGI configuration to call our Django application in the Railway environment.
 
 Once the application is running it can configure itself using the information provided in environment variables. For example, an application that uses a database can get the address using the variable DATABASE_URL. The database service itself may be hosted by Railway or some other provider.
 
@@ -60,13 +60,13 @@ Another useful feature is that you can use the CLI to run your local project wit
 
 To get the application working on Railway:
 
-Put your application into a git repository
+1. Put your application into a git repository
 
-For our Django web application, we'll need to add the files above
+2. For our Django web application, we'll need to add the files above
 
-Make changes to handle static files
+3. Make changes to handle static files
 
-Set up a Railway account and deploy your website.
+4. Set up a Railway account and deploy your website.
 
 ## Deploying
 1. Creating the application repository on GitHub
@@ -77,20 +77,20 @@ Some changes need to be made to your application to get it to work on Railway.
 
 Some files have to be added:
 
-Procfile
+*Procfile*
 A Procfile is the web application "entry point". It lists the commands that will be executed by Railway to start your site.
 
 Create the file Procfile (with no file extension) in the root of your project folder and copy/paste the following text:
 
-web: gunicorn ecommerce.wsgi --log-file -
+*web: gunicorn ecommerce.wsgi --log-file -*
 
-
+![Alt Text](/static/images/blog/deploy/procfile.JPG)
 
 The web: prefix tells Railway that this is a web process and can be sent HTTP traffic.
 
 We then start the gunicorn process, a popular web application server, passing its configuration information into the module ecommerce.wsgi (created with our application skeleton: /ecommerce/wsgi.py).
 
-Gunicorn
+*Gunicorn*
 Gunicorn is a pure-Python HTTP server that is commonly used for serving Django WSGI applications on Railway (as referenced in the Procfile above).
 
 We'll install gunicorn locally so that it becomes part of our requirements for Railway to set up on the remote server.
@@ -122,7 +122,7 @@ For this tutorial, collectstatic is run automatically by Railway before the appl
 
 In your settings.py file, open /ecommerce/settings.py and copy the following configuration into the bottom of the file.
 
-
+![Alt Text](/static/images/blog/deploy/settings.JPG)
 
 Whitenoise
 Whitenoise is one of the easiest methods for serving static assets directly from Gunicorn in production.
@@ -135,7 +135,11 @@ pip install whitenoise
 
 To install WhiteNoise into your Django application, open your settings.py file and go to /ecommerce/settings.py, find the MIDDLEWARE setting and add WhiteNoiseMiddleware near the top of the list, just below the SecurityMiddleware:
 
+![Alt Text](/static/images/blog/deploy/middleware.JPG)
+
 To reduce the size of the static files when they are served, add the following to the bottom of /ecommerce/settings.py:
+
+![Alt Text](/static/images/blog/deploy/settings.JPG)
 
 Requirements
 The Python requirements of your web application must be stored in a file requirements.txt at the root of your repository. Railway will then install these automatically when it rebuilds your environment. You can create this file using pip on the command line (run the following in the repo root):
@@ -143,6 +147,8 @@ The Python requirements of your web application must be stored in a file require
 pip freeze > requirements.txt
 
 After installing all the different dependencies above, your requirements.txt file should have at least these items listed (though the version numbers may be different).
+
+![Alt Text](/static/images/blog/deploy/requirements.JPG)
 
 Runtime
 The runtime.txt file, if defined, tells Railway which version of Python to use. Create the file in the root of the repo and add the following text:
@@ -156,18 +162,23 @@ To set up the Railway account, go to railway.app and Login using your GitHub cre
 
 the next step is to deploy from GitHub. On the top menu, choose the Dashboard option then select the New Project button:
 
-
+![Alt Text](/static/images/blog/deploy/deploy1.JPG)
 
 Railway will display a list of options for the new project. Select Deploy from GitHub repo option.
+
+![Alt Text](/static/images/blog/deploy/deploy2.JPG)
 
 All projects in the GitHub repos will be displayed. Select the GitHub repository that you want to deploy. In our case, it is the e-commerce site :
 `{/* project name. i.e meekkaran/Django_Ecommerce  */}
 
-Select Deploy Now to confirm your deployment
+![Alt Text](/static/images/blog/deploy/site.JPG)
 
+Select Deploy Now to confirm your deployment
+![Alt Text](/static/images/blog/deploy/deploy3.JPG)
 Railway will then load and deploy your project, displaying progress on the deployments tab. When deployment completes, you'll see a screen like the one below.
 
 Once your deployment is running correctly, navigate to the settings on your dashboard to generate a domain and your application will be exposed to the internet.
+![Alt Text](/static/images/blog/deploy/railwaydone.JPG)
 
 this is the domain provided for our Django -e-commerce website:
 
@@ -189,21 +200,31 @@ Create an account on Cloudflare
 
 If you do not have a domain yet, click on Domain registration to get a domain name.
 
+![Alt Text](/static/images/blog/deploy/cloudflare1.JPG)
+
 On the websites, hit the "add a site" button and add your domain name.
+
+![Alt Text](/static/images/blog/deploy/cloudflare2.JPG)
 
 2. Create a new CNAME Record
 Navigate to DNS and click on the "Add Record' button to create a new CNAME record that is pointing to your railway app link.
 
+![Alt Text](/static/images/blog/deploy/cloudflare3.JPG)
+
 The name should be CNAME and the target is the railway.app link
 
 Go back to your settings tab on Railway and click on "Add domain" to add your custom domain from Cloudflare.
+![Alt Text](/static/images/blog/deploy/adddomain.JPG)
 
 Set up the name and the value of your CNAME and wait for Railway to pick your DNS record.
+![Alt Text](/static/images/blog/deploy/dns.JPG)
 
 And your new domain name will be displayed right below the Railway's provided domain name.
 
 Within a few seconds, your Railway app should be up and running on your domain. On clicking the link it will be displayed on the website.
+![Alt Text](/static/images/blog/deploy/done.JPG)
 
 ## Conclusion
 And that's it. that's how to deploy your application to your custom Domain using Railway App and Cloudflare.
+![Alt Text](/static/images/blog/deploy/success.JPG)
 
