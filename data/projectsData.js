@@ -12,6 +12,12 @@ const projectsData = [
     href: 'https://ecommerce.meekkaran.com/',
   },
   {
+    title: 'Supply Chain Management Website',
+    description: `This is a website for a Supply Chain Management and logistics company`,
+    imgSrc: '/static/images/projects/supplychain.JPG',
+    href: 'https://supply-chain-management-six.vercel.app/',
+  },
+  {
     title: 'Industrial Attachment Management System',
     description: `This is a web-based management system which is developed to solve the problem of dealing with a lot of paperwork, making errors during filling in the logbook, losing the logbook or submitting error prone reports on the logbook. It will enable students to do their attachments from wherever they want without considering distance and the supervisors will supervise students’ logbook from wherever they will be.`,
     imgSrc: '/static/images/projects/iams.PNG',
