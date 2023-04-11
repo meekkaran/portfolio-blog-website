@@ -7,9 +7,8 @@ summary: 'A beginner guide to exploring Redux and Redux Toolkit'
 ---
 
 
-![Alt Text](/static/images/blog/techcareer/headingimg.jpg)
+![Alt Text](/static/images/blog/techcareer/redux.jpeg)
 
-![Alt Text](/static/images/blog/techcareer/headingimg.jpg)
 
 # Redux vs. Redux Toolkit
 
@@ -44,7 +43,8 @@ It's like comparing a grown-up's tools to a kid's tools -- the grown-up tools ca
 Here's an example of how you might use Redux and Redux Toolkit in a React app. Let's say you're building a simple app that lets you keep track of your favorite colors. You might start by creating a "store" using Redux:
 
 
-``` import { createStore } from 'redux';
+```Javascript
+import { createStore } from 'redux';
 
 const initialState = {
   favoriteColor: 'unknown',
@@ -62,14 +62,16 @@ function colorReducer(state = initialState, action) {
   }
 }
 
-const store = createStore(colorReducer);```
+const store = createStore(colorReducer);
+```
 
 This code creates a store that keeps track of your favorite color. When you first start the app, your favorite color is "unknown". When you tell the app what your favorite color is, it uses a "reducer" (the colorReducer function) to update the store.
 
 Now, let's say you want to use Redux Toolkit to make this code a little bit easier to use:
 
 
-```import { createSlice, configureStore } from '@reduxjs/toolkit';
+```Javascript
+import { createSlice, configureStore } from '@reduxjs/toolkit';
 
 const colorSlice = createSlice({
   name: 'color',
@@ -85,7 +87,8 @@ const colorSlice = createSlice({
 
 const store = configureStore({
   reducer: colorSlice.reducer,
-});```
+});
+```
 
 
 This code does the same thing as the previous code, but it uses Redux Toolkit to make it a little bit easier to read and write. 
