@@ -15,7 +15,13 @@ const projectsData = [
     title: 'Supply Chain Management Website',
     description: `This is a website for a Supply Chain Management and logistics company`,
     imgSrc: '/static/images/projects/supplychain.JPG',
-    href: 'https://supply-chain-management-six.vercel.app/',
+    href: 'https://supplychain.meekkaran.com/',
+  },
+  {
+    title: 'Data Finance Website',
+    description: `This is a simple UI that I built as I practised TailwindCSS`,
+    imgSrc: '/static/images/projects/datafinance.JPG',
+    href: 'http://data-finance.meekkaran.com/',
   },
   {
     title: 'Industrial Attachment Management System',
