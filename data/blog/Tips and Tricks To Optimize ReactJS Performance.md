@@ -7,7 +7,7 @@ summary: '5 tips I use to optimize my React JS Aplication Performance'
 ---
 
 
-# Introdution
+# Introduction
 
 Are you looking to improve the performance of your React.js application? Here are some tips and tricks that you can use to optimize your application's performance and ensure that it runs smoothly.
 
