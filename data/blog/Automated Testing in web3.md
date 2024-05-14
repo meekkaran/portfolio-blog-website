@@ -8,8 +8,6 @@ summary: '"Web3 innovates decentralized trust, yet faces smart contract vulnerab
 
 # Introduction
 
-![Alt Text](/static/images/blog/web3/webintro.jpeg)
-
 ***Hey there! While I may not be a Web3 expert, I'm a passionate learner navigating the dynamic realms of digital innovation.<br/> Whether it's Web2 or Web3, TESTING and AUTOMATION plays a crucial role in ensuring smooth and secure operations. So, as someone entrenched in the Web2 landscape, let's embark on this journey, embracing the chaos and learning together!***
 
 Despite the inherent security features of Web3, ensuring the reliability and robustness of decentralized applications remains paramount.
